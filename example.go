@@ -11,7 +11,7 @@ var instance Predictor
 var err error
 
 func init() {
-	instance, err = New("myModel", []string{"myTag"}, "classes.txt")
+	instance, err = New("model", []string{"myTag"}, "classes.txt")
 	if err != nil {
 		log.Println(err)
 		return
