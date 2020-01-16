@@ -24,7 +24,7 @@ func TestNew(t *testing.T) {
 		{
 			name: "When program can find the labels file name, folder model name and it's tags, then should return the instance and error is nil",
 			args: args{
-				folderModelName: path.Join("myModel"),
+				folderModelName: path.Join("model"),
 				tags:            []string{"myTag"},
 				labelsFileName:  path.Join("classes.txt"),
 			},
