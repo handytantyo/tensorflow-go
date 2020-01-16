@@ -1,7 +1,6 @@
 package predictor
 
 import (
-	"os"
 	"path"
 	"reflect"
 	"testing"
@@ -12,7 +11,6 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	dir, _ := os.Getwd()
 	type args struct {
 		folderModelName string
 		tags            []string
@@ -26,9 +24,9 @@ func TestNew(t *testing.T) {
 		{
 			name: "When program can find the labels file name, folder model name and it's tags, then should return the instance and error is nil",
 			args: args{
-				folderModelName: path.Join(dir, "../myModel"),
+				folderModelName: path.Join("myModel"),
 				tags:            []string{"myTag"},
-				labelsFileName:  path.Join(dir, "../classes.txt"),
+				labelsFileName:  path.Join("classes.txt"),
 			},
 		},
 	}

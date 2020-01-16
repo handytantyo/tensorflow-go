@@ -1,7 +1,6 @@
 package predictor
 
 import (
-	"os"
 	"path"
 	"reflect"
 	"testing"
@@ -49,7 +48,6 @@ func Test_argmax(t *testing.T) {
 }
 
 func Test_getLabels(t *testing.T) {
-	dir, _ := os.Getwd()
 	type args struct {
 		filename string
 	}
@@ -67,7 +65,7 @@ func Test_getLabels(t *testing.T) {
 		{
 			name: "When program can find the file, then should return labels and error is nil",
 			args: args{
-				filename: path.Join(dir, "../classes.txt"),
+				filename: path.Join("classes.txt"),
 			},
 			wantLabels: []string{"minus", "puluhan", "satuan"},
 		},
