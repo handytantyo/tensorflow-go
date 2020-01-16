@@ -5,10 +5,10 @@ import (
 	"log"
 
 	"github.com/handytan/tensorflow-go/predictor"
-	// tf "github.com/tensorflow/tensorflow/tensorflow/go"
 )
 
 // reference: https://tonytruong.net/running-a-keras-tensorflow-model-in-golang/
+// to test all file coverage -> go test ./... -coverprofile cover.out; go tool cover -func cover.out
 var instance predictor.Predictor
 var err error
 
