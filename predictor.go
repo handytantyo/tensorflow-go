@@ -14,6 +14,7 @@ type predictor struct {
 }
 
 // New instance for predictor tensorflow deep learning golang
+// It will return interface of Predictor and error message
 func New(folderModelName string, tags []string, labelsFileName string) (Predictor, error) {
 	labels := getLabels(labelsFileName)
 	model, err := tensorflow.LoadSavedModel(folderModelName, tags, nil)

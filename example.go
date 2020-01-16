@@ -1,19 +1,17 @@
-package main
+package predictor
 
 import (
 	"fmt"
 	"log"
-
-	"github.com/handytan/tensorflow-go/predictor"
 )
 
 // reference: https://tonytruong.net/running-a-keras-tensorflow-model-in-golang/
 // to test all file coverage -> go test ./... -coverprofile cover.out; go tool cover -func cover.out
-var instance predictor.Predictor
+var instance Predictor
 var err error
 
 func init() {
-	instance, err = predictor.New("myModel", []string{"myTag"}, "classes.txt")
+	instance, err = New("myModel", []string{"myTag"}, "classes.txt")
 	if err != nil {
 		log.Println(err)
 		return
